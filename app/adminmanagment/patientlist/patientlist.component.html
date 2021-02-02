@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+
+
+<div class="col-md-6" align="center" >
+    <h2> Patient Details</h2>
+    
+    <table class="table table-striped" style="border:1px">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Mobile Number</th>
+        <th>Address</th>
+        <!-- <th>Action</th> -->
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let patient of patients">
+        <td class="hidden"></td>
+        <td>{{patient.firstName}}</td>
+        <td>{{patient.lastName}}</td>
+        <td>{{patient.email}}</td>
+        <td>{{patient.phone}}</td>
+        <td>{{patient.address}}</td>
+       
+        
+        <!-- <td><button class="btn btn-danger" (click)="approvedUser(doctor)"> Approved Doctor</button></td> -->
+      </tr>
+      </tbody>
+    </table>
+</div>
+

@@ -1,0 +1,181 @@
+
+ <h1 class="text-primary text-center"> Appointment Details</h1>
+ <br><br><br>
+    <div *ngIf=flag1>
+   <!-- {{selectedDate}} -->
+   <div class="container"  style="max-width:600px">
+   <!-- <div *ngIf=!flag> -->
+   <!-- <div class="col-xs-12 col-12 col-md-4 form-group"> -->
+     <h4 text="text-primary">Select Appoinment Date</h4>  
+     
+    <input type="text"
+           placeholder="Choose Date"
+           [(ngModel)]="selectedDate"
+           class="form-control col-xs-12 col-12 col-md-4"
+           bsDatepicker
+           [datesEnabled]="enabledDates"
+           [bsConfig]="{ isAnimated: true, dateInputFormat: 'YYYY-MM-DD' }"
+           />
+  <!-- </div> --><br><br>
+  <button class="btn btn-danger" (click)="onClick()">Submit</button>
+  </div>
+  <!-- </div> -->
+ <br><br><br>
+
+
+<div class="container"  style="max-width:600px">
+<div *ngIf=flag>
+<h4>Select Appointment Time</h4>
+<form  (ngSubmit)="onSubmit()">
+<div class="form-group">
+    <!-- <label for="time"> Time :</label> -->
+
+<select id="id" name="id" [(ngModel)]="id" class="form-group" >
+   <option *ngFor="let t of timeList" [value]="t.doctorAvailabilityId"  >
+            {{t.startTime}}  - {{t.endTime}}
+ </option>
+    <!-- </select><span class="text-danger">{{nodata}}</span> -->
+ 
+</select><br><br>
+<button class="btn btn-danger " type="submit"> Book Appointment</button>
+</div>
+</form>
+
+
+
+</div>
+</div>
+</div>
+
+<br><br>
+<div *ngIf=status>
+ 
+<h2 class="text-danger text-center ">Appointment has been Successfully Registered</h2>  
+<div class="container">
+<h2 class="text-danger text-center">Appointment Id : {{message}}</h2>
+<button class="btn btn-danger text-center "  routerLink="/user"> Home </button>
+   <span style="padding-left: 70px"></span>
+<button class="btn btn-danger text-center"  routerLink="/view"> view  Appointment</button>
+</div>
+</div>
+<br><br>
+<br><br>
+
+
+
+
+
+<!-- <div class=" form-group">
+        <label for="dateOfBirth"></label>
+      <input type="text" bsDatepicker id="dateOfBirth" name="dateOfBirth" [(ngModel)]="dateOfBirth"  [outsideClick]="true">
+    </div> -->
+
+
+
+
+
+   
+ <!-- <br><br><br><br>
+ 
+
+<div *ngIf=flag>
+
+<div class="container " style="max-width:600px">
+ <div class="row"> <br><br>      
+   <h1 class="text-primary"> Appointment Details</h1>
+   <br><br><br><br>     
+   <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+    
+     <span style="padding-left: 70px"></span>  Appointment Date : -->
+     <!--
+      <label for="date" >  Date :</label>   
+     <div class="col-sm-9">
+       
+            <input type="text"
+               placeholder="Select Date"
+               class="form-control"
+               id="date"
+               name="date"
+               bsDatepicker
+               [bsValue]="bsValue"
+               [(ngModel)]="appdate"
+               [minDate]="minDate"
+               [maxDate]="maxDate"
+               [daysDisabled]="[6,0]"
+            
+               [bsConfig]="{ isAnimated: true, dateInputFormat: 'YYYY-MM-DD' }"/>
+        
+       </div>
+      </div>
+   
+    <div class="form-group">
+        <label for="time"> Time :</label>
+        <select id="time" name="time" [(ngModel)]="time" class="form-group" >
+            <option *ngFor="let slot of sdata" [value]="slot.doctorAvailabilityId">
+                {{slot.startTime}}  - {{slot.endTime}}
+            </option>
+        </select><span class="text-danger">{{nodata}}</span>
+    </div>
+    <button class="btn btn-danger " type="submit"> Book Appointment</button> 
+ </form>  
+ 
+</div> 
+</div>
+</div>
+
+
+
+<div *ngIf=!flag>
+    <br><br><br>
+    <div class="container text-center">
+    <h1 class="text-danger">Successfully Appointment has been registered  </h1>
+    <h2>Appointment Id:{{message}} </h2>   <br><br><br>
+    <button class="btn btn-danger text-center "  routerLink="/view"> view  Appointment</button>
+    </div> 
+</div>
+
+  -->
+
+   
+<!-- <div class="col-md-6">
+    <h2> Timing Details</h2>
+    
+    <table class="table table-striped">
+      <thead>
+      <tr>
+      
+        <th>Start Time</th>
+        <th>End Time</th>
+       
+       
+        <th>Action</th> 
+       </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let s of sdata">
+        <td>{{s.startTime}}</td>
+        <td>{{s.endTime}}</td>
+        <td><button class="btn btn-danger" (click)="approvedUser(doctor)"> select time</button></td>
+      </tr>
+      </tbody>
+    </table>
+</div> 
+-->
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+  
+
+
+    

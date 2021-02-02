@@ -1,0 +1,26 @@
+ 
+
+<div class="col-md-6" >
+    <h2> Doctor Details</h2>
+    
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let doctor of doctors">
+        <td class="hidden"></td>
+        <td>Dr. {{doctor.firstName | titlecase}}</td>
+        <td>{{doctor.lastName | titlecase}}</td>
+        <td>{{doctor.email}}</td>
+        <td><button class="btn btn-danger" (click)="getDoctorSlot(doctor.doctorId)"> select Doctor</button></td>
+      </tr>
+      </tbody>
+    </table>
+    </div>

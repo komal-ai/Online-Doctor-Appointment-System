@@ -1,0 +1,31 @@
+  
+ul#list-nav {
+    list-style:none;
+    margin:70px;
+    padding-top:0;
+    width:1500px
+    
+  }
+  
+  ul#list-nav li {
+    display:inline
+  }
+  
+  ul#list-nav li a {
+    text-decoration:none;
+    padding:5px 0;
+    width:300px;
+    background:rgba(17, 0, 255, 0.76);
+    color:#eee;
+    float:left;
+    text-align:center;
+    border-left:1px solid #fff;
+  }
+  
+  ul#list-nav li a:hover {
+    background:#dee2de;
+    color:#000
+  }
+  .navbar-light{
+    background-color:blue
+}    

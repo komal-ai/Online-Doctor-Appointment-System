@@ -1,0 +1,42 @@
+
+<img [src] =back alt="Ita Trulli" height ="300" width="100%">
+
+<div class='container' style="max-width:600px"  style = "margin-left: 600px">
+  <form #loginForm='ngForm' (ngSubmit)="loginUser()">
+    <h2 class="text-danger">{{msg}}</h2>
+    
+     <div class="form-group" [class.has.error]="email.invalid && email.touched">
+        <label for="email" class="control-label"><b>Email Address:</b></label>
+        <input id="email"   required  pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+        name="email" #email="ngModel"  [(ngModel)]="user.email"
+
+        type="text" class="form-control" >
+  
+        
+          <span class="text-danger" *ngIf="email.errors?.required && email.touched">
+            <p style="color:red">Email-id is required Field</p>
+          </span>
+          <span class="text-danger" *ngIf="email.errors?.pattern && email.touched" >
+           <p style="color:red">Enter the valid Email-id</p>
+          </span>
+       
+      </div>
+      <br>
+      <div class="form-group" [class.has.error]="password.invalid && password.touched">
+        <label for="password" class="control-label" ><b>Password:</b></label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="password" required type="text" class="form-control"  [(ngModel)]="user.password" #password="ngModel">
+        <span class="text-danger" *ngIf="password.errors?.required && password.touched">
+            <p style="color:red">password is required Field</p>
+          </span>
+      </div>
+     
+      <div class="checkbox">
+        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<label><input type="checkbox"> Remember me</label>
+      </div>
+      
+      &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<button [disabled]="loginForm.form.invalid" type="submit" class="btn btn-primary">Login</button>
+      
+   
+      <a href="/register/{{value}}" class="float-right" *ngIf="flag">new user? Register here</a>
+     </form>
+    <div>

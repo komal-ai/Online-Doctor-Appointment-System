@@ -1,0 +1,42 @@
+<!-- <app-header></app-header> -->
+<papp-header></papp-header>
+
+
+<div class="container">
+<div class="col-md-12">
+    <h2 class="text-center text-primary "> All Appointment Details</h2>
+    
+    <table class="table table-striped" >
+      <thead>
+      <tr>
+        
+        <th>Appointment Id</th>
+        <th>Doctor Name</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Appointment Date</th>
+        <th>Email</th>
+        <th>Mobile Number</th>
+        <th>Address</th>
+        <!-- <th>Action</th> -->
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let app of appointmentList">
+        
+        <td>{{app.appointmentId}}</td>
+        <td> Dr. {{app.doctor.firstName | titlecase}} {{app.doctor.lastName | titlecase}}</td>
+        <td>{{app.startTime}}</td>
+        <td>{{app.endTime}}</td>
+        <td>{{app.appointmentDate}}</td>
+        <td>{{app.doctor.email}}</td>
+        <td>{{app.doctor.phone}}</td>
+        <td>{{app.doctor.address}}</td>
+       
+        
+        <!-- <td><button class="btn btn-danger" (click)="approvedUser(doctor)"> Approved Doctor</button></td> -->
+      </tr>
+      </tbody>
+    </table>
+</div>
+</div>

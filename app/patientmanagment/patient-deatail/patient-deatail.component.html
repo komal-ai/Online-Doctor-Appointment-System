@@ -1,0 +1,51 @@
+<!-- <app-header></app-header>  -->
+<papp-header></papp-header>
+<!-- {{firstName}}
+{{lastName}}
+{{email}}
+{{password}}
+{{address}}
+  {{phone}}
+ {{gender}} -->
+
+
+
+
+<div  class='container text-center'  style="max-width:600px" style="margin-left:500px"  >
+    <!-- <div class="row"> -->
+     <!-- <div class="col-md-6"> -->
+     <h2 > Patient Details</h2><br>
+    
+    <table class="table table-striped">
+      
+    <tbody>
+    <tr >
+         <td>Name  :</td> <td>{{firstName}}</td>
+    </tr>
+    <tr>
+        <td>Last Name  :</td><td>{{lastName}}</td>
+    </tr>
+    <tr>
+        <td>Email-Id  :</td><td>{{email}}</td>
+    </tr>
+    <tr>
+        <td>Mob no  :</td> <td>{{phone}}</td>
+    </tr>
+    <tr>
+        <td>Address   :</td><td>{{address}}</td>
+    </tr> 
+    <tr>
+        <td>DOB  :</td> <td>{{dob}}</td>
+    </tr>
+    <tr>
+        <td>Gender   :</td><td>{{gender}}</td>
+    </tr> 
+    
+    </tbody>
+    </table>
+    <button class="btn btn-danger  text-center" (click)="updatedDetails(id)"> Update Details</button> 
+<!-- </div> -->
+<!-- </div> -->
+ </div>
+
+<br><br><br><br><br><br> 

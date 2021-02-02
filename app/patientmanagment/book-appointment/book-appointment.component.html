@@ -1,0 +1,30 @@
+<!-- <app-header></app-header> -->
+<papp-header></papp-header>
+
+
+
+
+
+
+
+<div class='container text-center' style="max-width:600px" style="margin-left:500px">
+  <h1 class="text-primary"> Book Appointment</h1>  <br><br><br>
+<form #loginForm='ngForm' (ngSubmit)="loginUser()" >
+<label for="Specialization">Choose  Specialization </label>
+<select name="Specialization"  id="Specialization" [(ngModel)]="spec">
+  <option value="NEUROLOGIST">Neurologist</option>
+  <option value="CARDIOLOGIST">Cardiologist</option>
+  <option value="DERMATOLOGY">Dermatology</option>
+  <option value="PATHOLOGY">Pathology</option>
+</select> <span class="text-danger">{{msg}}</span>
+
+<br><br>
+
+<button type="submit" class="btn btn-danger text-center"> Check doctor list</button>
+</form>
+
+    <div *ngIf="flag">
+    <app-doctor-list [doctors]="doctors" ></app-doctor-list>
+    </div>
+    
+
